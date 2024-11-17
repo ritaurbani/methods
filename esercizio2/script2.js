@@ -17,11 +17,9 @@ for (let i=0; i<students.length;i++) {
 }
 
 //Porto in pagina
-
 listElem.innerHTML = liItems
 
 //Aggiungo nuovo studente
-
 btnElem.addEventListener("click", function() {
     const newStudent = prompt("aggiungi nuovo studente")
     students.push(newStudent)
@@ -29,3 +27,5 @@ btnElem.addEventListener("click", function() {
     listElem.innerHTML += `<li>${newStudent}</li>`
    
 }) 
+
+console.log(students)

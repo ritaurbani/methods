@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+ header {
+    padding: 0 20px;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid black;
+ }
+
+ .header-left, .header-right {
+    float: left;
+    height: 100%;
+ }
+
+ .header-left {
+    width: 20%;
+ }
+
+ .header-right {
+    width: 80%;
+ }
+
+ .header-left img {
+    height: 40px;
+ }
+
+  /* direct child - DISPLAY NONE*/
+ .header-right > a {
+    display: none;
+ }
+
+ .header-right ul {
+    list-style: none;
+    height: 100%;
+    text-align: right;
+ }
+
+ .header-right ul li {
+    /* si affiancano */
+    display: inline-block; 
+    margin: 0 20px;
+    line-height: j70px;
+    height: 100%;
+ }
+
+ .header-right ul li a {
+    text-decoration: none;
+ }
+
+ .header-right ul li a.cta {
+    padding: 10px 20px;
+ }
+
+/* POSITION ABSOLUTE IS GOOD FOR HAMBURGER MENU => SUO CONTENITORE DEVE ESSERE RELATIVE*/
+/* top: 10px;
+Distanzia 10px dall'alto del contenitore
+left: 10px;
+Distanzia 10px da sinistra */
+/* SE USI POSITION: FIXED IN RELAZIONE A VIEWPORT */
+
+
+/* SCRITTURA QUANDO SI CLICCA SU HAMBURGER MENU */
+ .hamburger-menu {
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    cursor: pointer;
+ } 
+
+ /* METTI QUI FLEX */
+   .hamburger-menu ul {
+    display:flex;
+    justify-content: space-around;
+    flex-direction:column;
+    align-items:flex-end;
+    list-style: none;
+    height: 100%;
+ }
+
+ .hamburger-menu ul li a {
+    text-decoration: none;
+ }
+
+ .close {
+    display: block;
+    position:absolute;
+    right:0;
+    top:0; 
+ }
+
+ @media screen and (max-width: 1000px)
+
+ { .header-right ul{
+    display: none;
+ }
+/* PRIMA ERA NONE - ORA E VISIBILE */
+ .header-right > a {
+    display: block;
+    height: 100%;
+    float: right;
+    line-height: 70px;
+ }
+
+ .hamburger-menu.active {
+    display: block;
+ } 
+
+ }
